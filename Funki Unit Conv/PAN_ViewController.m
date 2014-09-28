@@ -26,4 +26,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)convertButtonPressed:(UIButton *)sender {
+    
+    float numberOfBills = [self.numberOfBillsText.text floatValue];
+    float numberOfFields = numberOfBills/91440;
+    
+    self.numberOfFieldsLabel.text = [NSString stringWithFormat:@"%.2f", numberOfFields];
+    
+    
+    [self.numberOfBillsText resignFirstResponder];
+    
+    
+}
 @end
